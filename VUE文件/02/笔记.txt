@@ -1,0 +1,28 @@
+如何使用vue:
+    1.安装(引包或者命令行安装)
+        1.1 将vue文件下载到本地
+            使用cdn
+        1.2 使用命令行安装
+    2.通过实例化一个Vue对象
+        new Vue({
+            el : "目的地",
+            data : {
+                数据
+                title : "hello world"
+            },
+            methods :{
+                方法
+            }
+        })
+    3.插值表达式
+        {{ title }}
+    4.指令
+        v-on:  监听事件 简写方式 @
+        v-bind 绑定属性 简写方式 :
+        v-once  禁止二次渲染
+        v-if
+        v-else-if
+        v-else
+        v-show
+        v-text
+        v-html

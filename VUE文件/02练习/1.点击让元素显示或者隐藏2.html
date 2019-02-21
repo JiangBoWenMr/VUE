@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border:2px solid #ccc;
+            margin: 100px auto;
+            background: pink
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="show">hide</button>
+
+        <button v-on:click="hide">show</button>
+
+        <button @click="toggle()">toggle</button>
+
+        <div class="box" v-show="Boolean">盒子</div>
+
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el : "#app",
+
+        data : {
+            Boolean : true
+        },
+
+        methods : {
+            show : function () {
+                this.Boolean = false;
+            },
+            hide : function () {
+                this.Boolean = true;
+            },
+            toggle : function () {
+                if(this.Boolean){
+                    this.Boolean = false;
+                }else{
+                    this.Boolean = true;
+                }
+            }
+        }
+    })
+</script>

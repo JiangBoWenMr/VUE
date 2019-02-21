@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 绑定输入框事件 -->
+        <input type="text" value="Hello World" v-on:input="changeTitle">
+
+        <p>{{title}}</p>
+    </div>
+</body>
+</html>
+<!-- 输入内容控制 p的值 -->
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+            title : "Hello World"
+        },
+        methods : {
+            changeTitle : function (event) {
+                this.title = event.target.value;
+            }
+        }
+    })
+</script>

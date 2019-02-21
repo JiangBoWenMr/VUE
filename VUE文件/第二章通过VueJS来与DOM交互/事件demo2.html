@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" @input="text=$event.target.value">
+        <!-- 获取事件对象值 -->
+        <p>{{text}}</p>
+        <button @click="test">点击</button>
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+            text : "vue.js"
+        },
+        methods : {
+            test : function () {
+                alert(this.text)
+            }
+        }
+    })
+</script>
